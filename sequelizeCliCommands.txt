@@ -1,0 +1,41 @@
+// Country
+npx sequelize-cli model:generate --name Country --attributes name:string
+
+// State
+npx sequelize-cli model:generate --name State --attributes name:string
+
+// City
+npx sequelize-cli model:generate --name City --attributes name:string
+
+// Company
+npx sequelize-cli model:generate --name Company --attributes name:string, logo:string, address:string, email:string, commerce_contact_name:string, commerce_contact_email:string, commerce_contact_phone:string, tech_contact_name:string, tech_contact_email:string, tech_contact_phone:string
+
+// Zoom Account
+npx sequelize-cli model:generate --name ZoomAccount --attributes name:string, api_key:string, api_secret:string, is_active:boolean
+
+// Zoom Token
+npx sequelize-cli model:generate --name ZoomToken --attributes token:string, is_busy:boolean
+
+// Template
+npx sequelize-cli model:generate --name Template --attributes name:string
+
+//Asset
+npx sequelize-cli model:generate --name Asset --attributes type:string, data:json
+
+// Skill
+npx sequelize-cli model:generate --name Skill --attributes name:string
+
+// User
+npx sequelize-cli model:generate --name User --attributes name:string, lastname: string, email:string, password:string
+
+// UserType
+npx sequelize-cli model:generate --name UserType --attributes name:string, slug:string
+
+// Call
+npx sequelize-cli model:generate --name Call --attributes evaluation:integer
+
+// Totem
+npx sequelize-cli model:generate --name Totem --attributes name:string, totem_id:string, monitor:string, camera:string, computer:string, audio:string, red:string, equipment_force:string, chasis:string
+
+// Group
+npx sequelize-cli model:generate --name Group --attributes namee:string, description:text
