@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {tableName: "p_city" , paranoid: true});
   City.associate = function(models) {
-    // associations can be defined here
+    City.belongsTo(models.State);
   };
   return City;
 };

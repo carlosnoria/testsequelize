@@ -9,10 +9,10 @@ module.exports = {
       type: Sequelize.UUID,
       references: {
         model: 'p_country',
-        key: 'id', 
+        key: 'id' 
       },
       onUpdate: 'CASCADE',
-      onDelete: 'SET NULL',
+      onDelete: 'SET NULL'
      }
    );
   },

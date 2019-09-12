@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {tableName: "template" , paranoid: true});
   Template.associate = function(models) {
-    // associations can be defined here
+    Template.hasMany(models.Asset);
   };
   return Template;
 };

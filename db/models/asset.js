@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     data: DataTypes.JSON
   }, {tableName: "asset" , paranoid: true});
   Asset.associate = function(models) {
-    // associations can be defined here
+    Asset.belongsTo(models.Template);
   };
   return Asset;
 };
