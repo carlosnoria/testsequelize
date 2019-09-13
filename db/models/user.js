@@ -7,7 +7,9 @@ module.exports = (sequelize, DataTypes) => {
     password: DataTypes.STRING
   }, {tableName: "users" , paranoid: true});
   User.associate = function(models) {
-    // associations can be defined here
+    User.belongsTo(models.Company);
+    User.belongsTo(models.UserType);
+    User.hasMany(models.Call);
   };
   return User;
 };

@@ -5,6 +5,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {tableName: "p_city" , paranoid: true});
   City.associate = function(models) {
     City.belongsTo(models.State);
+    City.hasMany(models.Company);
   };
   return City;
 };

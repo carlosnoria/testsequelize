@@ -8,6 +8,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {tableName: "zoom_account" , paranoid: true});
   ZoomAccount.associate = function(models) {
     ZoomAccount.hasMany(models.ZoomToken);
+    ZoomAccount.belongsTo(models.Company);
   };
   return ZoomAccount;
 };

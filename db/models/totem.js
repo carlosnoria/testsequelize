@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     chasis: DataTypes.STRING
   }, {tableName: "totem" , paranoid: true});
   Totem.associate = function(models) {
-    // associations can be defined here
+    Totem.hasMany(models.Call);
   };
   return Totem;
 };

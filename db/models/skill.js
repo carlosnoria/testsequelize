@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {tableName: "skill" , paranoid: true});
   Skill.associate = function(models) {
-    // associations can be defined here
+    Skill.belongsTo(models.Company);
   };
   return Skill;
 };

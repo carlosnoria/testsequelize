@@ -4,7 +4,8 @@ module.exports = (sequelize, DataTypes) => {
     evaluation: DataTypes.INTEGER
   }, {tableName: "call" , paranoid: true});
   Call.associate = function(models) {
-    // associations can be defined here
+    Call.belongsTo(models.User);
+    Call.belongsTo(models.Totem);
   };
   return Call;
 };
