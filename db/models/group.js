@@ -5,7 +5,8 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.TEXT
   }, {tableName: "group" , paranoid: true});
   Group.associate = function(models) {
-    // associations can be defined here
+    Group.hasMany(models.Totem);
+    Group.belongsToMany(models.User, {through: 'a_user_group'});
   };
   return Group;
 };

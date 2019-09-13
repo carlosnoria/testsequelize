@@ -13,6 +13,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {tableName: "totem" , paranoid: true});
   Totem.associate = function(models) {
     Totem.hasMany(models.Call);
+    Totem.belongsTo(models.Group);
   };
   return Totem;
 };

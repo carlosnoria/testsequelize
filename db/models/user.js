@@ -10,6 +10,8 @@ module.exports = (sequelize, DataTypes) => {
     User.belongsTo(models.Company);
     User.belongsTo(models.UserType);
     User.hasMany(models.Call);
+    User.belongsToMany(models.Skill, {through: 'a_user_skill'});
+    User.belongsToMany(models.Group, {through: 'a_user_group'});
   };
   return User;
 };
