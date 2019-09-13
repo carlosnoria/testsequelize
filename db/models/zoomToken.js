@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     is_busy: DataTypes.BOOLEAN
   }, {tableName: "zoom_token" , paranoid: true});
   ZoomToken.associate = function(models) {
-    // associations can be defined here
+    ZoomToken.belongsTo(models.ZoomAccount);
   };
   return ZoomToken;
 };

@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
     is_active: DataTypes.BOOLEAN
   }, {tableName: "zoom_account" , paranoid: true});
   ZoomAccount.associate = function(models) {
-    // associations can be defined here
+    ZoomAccount.hasMany(models.ZoomToken);
   };
   return ZoomAccount;
 };
